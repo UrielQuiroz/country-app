@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CountrySearchInputComponent } from "../../components/country-search-input/country-search-input";
 import { CountryListComponent } from "../../components/country-list/country-list";
+import { SearchInputComponent } from "../../components/search-input/search-input";
 
 @Component({
   selector: 'app-by-capital-page',
-  imports: [CountrySearchInputComponent, CountryListComponent],
+  imports: [CountryListComponent, SearchInputComponent],
   templateUrl: './by-capital-page.html',
 })
 export class ByCapitalPageComponent {
