@@ -6,7 +6,8 @@ import {
   PathLocationStrategy,
   Title,
   ViewportScroller
-} from "./chunk-H7JER3Q2.js";
+} from "./chunk-MFAYRRPU.js";
+import "./chunk-OVAX7WHF.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   ApplicationRef,
