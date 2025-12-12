@@ -1,13 +1,13 @@
 import {
+  withHttpTransferCache
+} from "./chunk-YPQU35LE.js";
+import {
   CommonModule,
   DomAdapter,
   PLATFORM_BROWSER_ID,
   getDOM,
   setRootDomAdapter
-} from "./chunk-5JLNKCAC.js";
-import {
-  withHttpTransferCache
-} from "./chunk-JCFQ5C7X.js";
+} from "./chunk-PSDCFV3A.js";
 import {
   XhrFactory,
   parseCookieValue
@@ -18,15 +18,9 @@ import {
   ApplicationRef,
   CSP_NONCE,
   Console,
-  DOCUMENT,
-  ENVIRONMENT_INITIALIZER,
-  ErrorHandler,
-  INJECTOR_SCOPE,
   IS_ENABLED_BLOCKING_INITIAL_NAVIGATION,
   Inject,
   Injectable,
-  InjectionToken,
-  Injector,
   NgModule,
   NgZone,
   Optional,
@@ -34,18 +28,13 @@ import {
   PLATFORM_INITIALIZER,
   RendererFactory2,
   RendererStyleFlags2,
-  RuntimeError,
   SecurityContext,
   TESTABILITY,
   TESTABILITY_GETTER,
   Testability,
   TestabilityRegistry,
   TracingService,
-  Version,
   ViewEncapsulation,
-  XSS_SECURITY_URL,
-  ZONELESS_ENABLED,
-  _global,
   _sanitizeHtml,
   _sanitizeUrl,
   allLeavingAnimations,
@@ -56,11 +45,7 @@ import {
   bypassSanitizationTrustStyle,
   bypassSanitizationTrustUrl,
   createPlatformFactory,
-  formatRuntimeError,
-  forwardRef,
-  inject,
   internalCreateApplication,
-  makeEnvironmentProviders,
   platformCore,
   setClassMetadata,
   setDocument,
@@ -69,11 +54,28 @@ import {
   withEventReplay,
   withI18nSupport,
   withIncrementalHydration,
+  ɵɵdefineNgModule
+} from "./chunk-2N3NKMVR.js";
+import {
+  DOCUMENT,
+  ENVIRONMENT_INITIALIZER,
+  ErrorHandler,
+  INJECTOR_SCOPE,
+  InjectionToken,
+  Injector,
+  RuntimeError,
+  Version,
+  XSS_SECURITY_URL,
+  ZONELESS_ENABLED,
+  _global,
+  formatRuntimeError,
+  forwardRef,
+  inject,
+  makeEnvironmentProviders,
   ɵɵdefineInjectable,
   ɵɵdefineInjector,
-  ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-NKWTGXST.js";
+} from "./chunk-IFNXGSBF.js";
 import {
   __spreadValues
 } from "./chunk-WDMUDEB6.js";
@@ -2033,4 +2035,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-L774RLZB.js.map
+//# sourceMappingURL=chunk-UNKFEMC7.js.map
