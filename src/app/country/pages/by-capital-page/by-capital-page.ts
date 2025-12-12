@@ -2,7 +2,6 @@ import { Component, inject, resource, signal } from '@angular/core';
 import { CountryListComponent } from "../../components/country-list/country-list";
 import { SearchInputComponent } from "../../components/search-input/search-input";
 import { CountryService } from '../../services/country.service';
-import { Country } from '../../interfaces/country.interface';
 import { firstValueFrom } from 'rxjs';
 
 @Component({
