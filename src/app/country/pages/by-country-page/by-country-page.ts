@@ -28,11 +28,11 @@ export class ByCountryPageComponent {
       stream: ({ params  }) => {
         if(!params.query) return of([]);
 
-      this.route.navigate(['/country/by-country/'], {
-        queryParams: {
-          query: params.query
-        }
-      })
+        this.route.navigate(['/country/by-country/'], {
+          queryParams: {
+            query: params.query
+          }
+        })
 
         return this.countryService.searchByCountry(params.query)
       },
