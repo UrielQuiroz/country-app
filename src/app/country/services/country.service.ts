@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 
 import { RESTCountry } from '../interfaces/rest-countries.interface';
-import { catchError, delay, map, Observable, of, throwError } from 'rxjs';
+import { catchError, delay, map, Observable, of, tap, throwError } from 'rxjs';
 import { CountryMapper } from '../mapper/country.mapper';
 import type { Country } from '../interfaces/country.interface';
 
@@ -13,13 +13,20 @@ const API_URL = 'https://restcountries.com/v3.1'
 })
 export class CountryService {
   private http = inject(HttpClient);
+  private queryCacheCapital = new Map<string, Country[]>();
 
   searchByCapital(query: string): Observable<Country[]> {
     query = query.toLowerCase();
 
+    if(this.queryCacheCapital.has(query)) {
+      return of(this.queryCacheCapital.get(query) ?? []);
+    }
+
+    console.log('Obteniendo del servidor...')
     return this.http.get<RESTCountry[]>(`${ API_URL }/capital/${ query }`)
       .pipe(
         map(resp => CountryMapper.mapRestCountryArrayToCountryArray(resp) ),
+        tap((countries) => this.queryCacheCapital.set(query, countries)),
         catchError((error) => {
           return throwError(
             () => new Error(`No se pudo obtener paises con ese query ${ query }`)
