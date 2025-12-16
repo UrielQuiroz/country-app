@@ -43,7 +43,6 @@ export class CountryService {
     if(this.queryCacheCountry.has(query)) {
       return of(this.queryCacheCountry.get(query) ?? []);
     }
-    console.log('Obteniendo del servidor...')
 
     return this.http.get<RESTCountry[]>(`${ API_URL }/name/${ query }`)
       .pipe(

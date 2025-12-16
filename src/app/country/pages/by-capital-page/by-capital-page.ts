@@ -25,7 +25,6 @@ export class ByCapitalPageComponent {
     params: () => ({ query: this.query() }),
 
     stream: ({ params  }) => {
-      console.log({query: params.query})
       if(!params.query) return of([]);
 
       this.route.navigate(['/country/by-capital/'], {

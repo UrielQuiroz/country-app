@@ -19,7 +19,6 @@ export class CountryPageComponent {
   countryResourse = rxResource({
     params: () => ({ code: this.countryCode }),
     stream: ({ params }) => {
-      console.log(params)
       return this.countryService.searchCountryByAlphaCode(params.code);
     }
   })
