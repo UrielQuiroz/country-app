@@ -3,7 +3,8 @@
 <!-- country-search-input -->
 <country-search-input
     placeholder="Buscar por pais"
-    (value)="query.set($event)"/>
+    (value)="query.set($event)"
+    [initialValue]="query()"/>
 
 <!-- country-list -->
   <country-list
